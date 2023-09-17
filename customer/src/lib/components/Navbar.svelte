@@ -5,7 +5,7 @@
 				<img src="/logo.png" alt="logo" class="md:w-[64px] md:h-[64px] h-[48px] w-[48px]" style="filter: invert(1);"/>
 			</div>
 			<form method="POST" action="?/search" class="flex-1 text-center pt-4 md:text-xl text-md">
-				<input type="text" placeholder="Search" name="search" class="px-4 py-2 rounded-3xl bg-white/70"/>
+				<input type="text" placeholder="Search" name="search" class="px-4 py-2 rounded-3xl bg-white/70  max-w-[250px]"/>
 			</form>
 			<div class="hidden md:flex flex-1 flex-row justify-end gap-4">
 				<a class="w-[100px] text-2xl text-center pt-5 hover:font-bold duration-100 text-white/70" href="/">Home</a>

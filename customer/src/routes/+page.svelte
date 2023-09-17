@@ -1,15 +1,25 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	let types: Array<string> = ["Starters", "Meals", "Dessert"]
-	$: dishes = $page.data.types
+	import FoodCard from "$lib/components/FoodCard.svelte";
+	import type { Food } from '$lib/utis/FoodType';
+
+	let types: Array<string> = []
+	let foods: Array<Food> = []
+	$: types = $page.data.types
+	$: foods = $page.data.foods
 </script>
 
 <div class="pt-nav-height">
-	<div class="xl:max-w-[1920px] w-screen overflow-x-auto flex flex-row justify-center ms-auto me-auto bg-white gap-4 shadow-md">
+	<div class="ps-12 xl:max-w-[1920px] w-screen overflow-x-auto flex flex-row justify-center ms-auto me-auto bg-white gap-4 shadow-md">
 		{#each types as type}
-			<div class="w-[100px] text-md font-medium text-center py-2 shrink-0">
+			<a href="?type={type}" class="w-[130px] text-xl font-medium text-center py-3 shrink-0 cursor-pointer">
 				{type}
-			</div>
+			</a>
+		{/each}
+	</div>
+	<div class="px-5 py-5 flex flex-col gap-4">
+		{#each foods as food}
+			<FoodCard {food}/>
 		{/each}
 	</div>
 </div>
