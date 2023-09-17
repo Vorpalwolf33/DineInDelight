@@ -6,7 +6,7 @@
 
 <div>
 	<Navbar />
-	<div class="max-w-[1920px] ms-auto me-auto px-[10%] min-h-screen">
+	<div class="max-w-[1920px] ms-auto me-auto md:px-[10%] min-h-screen">
 		<slot />
 	</div>
 	<Footer />
