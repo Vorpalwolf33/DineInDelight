@@ -8,9 +8,9 @@
 				<input type="text" placeholder="Search" name="search" class="px-4 py-2 rounded-3xl bg-white/70  max-w-[250px]"/>
 			</form>
 			<div class="hidden md:flex flex-1 flex-row justify-end gap-4">
-				<a class="w-[100px] text-2xl text-center pt-5 hover:font-bold duration-100 text-white/70" href="/">Home</a>
-				<a class="w-[100px] text-2xl text-center pt-5 hover:font-bold duration-100 text-white/70" href="/cart">Cart</a>
-				<a class="w-[100px] text-2xl text-center pt-5 hover:font-bold duration-100 text-white/70" href="/about">About</a>
+				<a class="w-[100px] text-xl text-center pt-6 hover:font-bold duration-100 text-white/80" href="/">Home</a>
+				<a class="w-[100px] text-xl text-center pt-6 hover:font-bold duration-100 text-white/80" href="/cart">Cart</a>
+				<a class="w-[100px] text-xl text-center pt-6 hover:font-bold duration-100 text-white/80" href="/about">About</a>
 			</div>
 		</div>
 	</div>

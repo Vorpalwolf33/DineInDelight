@@ -12,12 +12,12 @@
 <div class="pt-nav-height">
 	<div class="ps-12 xl:max-w-[1920px] w-screen overflow-x-auto flex flex-row justify-center ms-auto me-auto bg-white gap-4 shadow-md">
 		{#each types as type}
-			<a href="?type={type}" class="w-[130px] text-xl font-medium text-center py-3 shrink-0 cursor-pointer">
+			<a href="?type={type}" class="w-[130px] text-xl hover:font-bold font-light font-medium text-center py-3 shrink-0 cursor-pointer">
 				{type}
 			</a>
 		{/each}
 	</div>
-	<div class="px-5 py-5 flex flex-col gap-4">
+	<div class="px-5 py-5 flex flex-col md:flex-row md:flex-wrap md:justify-evenly gap-4 mt-24">
 		{#each foods as food}
 			<FoodCard {food}/>
 		{/each}

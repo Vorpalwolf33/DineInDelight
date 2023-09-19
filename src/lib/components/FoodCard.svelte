@@ -3,7 +3,7 @@
   export let food: Food
 </script>
 
-<div class="w-full h-[150px] shadow-lg rounded-2xl flex flex-row overflow-hidden">
+<div class="w-full max-w-[500px] h-[150px] shadow-lg rounded-2xl flex flex-row overflow-hidden">
   <div class="flex-1 shrink-0">
     <img src="{food.image}" alt="Food" class="h-full w-full object-cover"/>
   </div>

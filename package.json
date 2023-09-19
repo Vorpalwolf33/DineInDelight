@@ -31,5 +31,8 @@
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write ."
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "mongoose": "^7.5.2"
+  }
 }
