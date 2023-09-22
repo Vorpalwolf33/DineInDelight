@@ -10,7 +10,7 @@
 		<button class={`border px-3 py-2 duration-100 ${active == "Menu Items"?"bg-white border-gray-300 border-b-transparent":"border-transparent bg-gray-100"}`} on:click={() => active="Menu Items"}>Menu Items</button>
 		<button class={`border px-3 py-2 duration-100 ${active == "Categories"?"bg-white border-gray-300 border-b-transparent":"border-transparent bg-gray-100"}`} on:click={() => active="Categories"}>Categories</button>
 	</div>
-	<div class="bg-white min-h-screen p-8">
+	<div class="bg-white pb-24 p-8">
 		<div class="mt-12">
 			{#if active == "Menu Items"}
 				<MenuItems />

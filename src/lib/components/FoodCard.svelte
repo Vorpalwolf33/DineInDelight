@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Food } from '$lib/utis/FoodType';
+  import type { Food } from '$lib/utils/FoodType';
   export let food: Food
 </script>
 

@@ -32,7 +32,7 @@
 	]
 </script>
 
-<div class="max-w-[300px] min-w-[300px] shadow-lg flex flex-col justify-between pb-12 px-6">
+<div class="max-w-[300px] min-w-[300px] shadow-lg flex flex-col justify-between pb-12 px-6 bg-white">
 	<div>
 		<div class="border-b border-gray-300">
 			<img src="/logo.png" alt="Logo" class="w-[48px] h-[48px] ms-auto me-auto my-5"/>

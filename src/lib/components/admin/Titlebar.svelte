@@ -7,7 +7,7 @@
 	}
 </script>
 
-<div class="flex flex-row justify-start gap-2 px-10 py-7 shadow-md">
+<div class="flex flex-row justify-start gap-2 px-10 py-7 shadow-md bg-white">
 	{#each title as str, index}
 		<div class="capitalize flex flex-row justify-start gap-2 text-xl">
 			<span>

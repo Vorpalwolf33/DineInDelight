@@ -29,20 +29,22 @@
 </div>
 <div class="mt-16 categories-table">
 	<h2 class="font-bold text-2xl">Category List</h2>
-	<table class="mt-6 table-fixed min-w-[300px]">
+	<table class="mt-6 min-w-[300px]">
 		<thead class="border-b border-b-2">
 			<tr>
+				<th class="text-start ps-2">#</th>
 				<th>Name</th>
 				<th>Actions</th>
 			</tr>
 		</thead>
-		<tbody class="before:leading-4">
-			{#each categories as category}
+		<tbody class="before:leading-4 [&>*:nth-child(even)]:bg-orange-100 [&>*:nth-child(odd)]:bg-orange-200">
+			{#each categories as category, index}
 				<tr>
+					<td class="min-w-[30px] ps-2">{index + 1}</td>
 					<td class="">{category.name}</td>
-					<td class="flex flex-row justify-center gap-2">
-						<button on:click={() => handleDelete(category._id)} class="bg-orange-500 hover:bg-orange-600 text-white px-2 py-1 rounded-sm">Edit</button>
-						<button on:click={() => handleDelete(category._id)} class="bg-orange-500 hover:bg-orange-600 text-white px-2 py-1 rounded-sm">Delete</button>
+					<td class="flex flex-row justify-center gap-2 py-2">
+						<!-- <button on:click={() => handleDelete(category._id)} class="bg-gray-100 border border-gray-700 hover:bg-white hover:border-black duration-100 hover:scale-105 px-2 py-1 rounded-sm">Edit</button> -->
+						<button on:click={() => handleDelete(category._id)} class="bg-gray-100 border border-gray-700 hover:bg-white hover:border-black duration-100 hover:scale-105 px-2 py-1 rounded-sm">Delete</button>
 					</td>
 				</tr>
 			{/each}

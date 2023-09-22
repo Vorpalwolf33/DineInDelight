@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/stores";
 	import FoodCard from "$lib/components/FoodCard.svelte";
-	import type { Food } from '$lib/utis/FoodType';
+	import type { Food } from '$lib/utils/FoodType';
 	import Navbar from "$lib/components/Navbar.svelte";
 	import Footer from "$lib/components/Footer.svelte";
 
