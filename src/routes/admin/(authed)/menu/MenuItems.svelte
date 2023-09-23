@@ -17,8 +17,8 @@
 		if(fileInput && fileInput.files) {
 			showImage = true;
 
-			const file = fileInput.files[0]
-			if (file) {
+			if (fileInput.files[0]) {
+				const file = fileInput.files[0]
 				const reader = new FileReader();
 				reader.addEventListener('load', function() {
 					if(typeof reader.result == 'string')

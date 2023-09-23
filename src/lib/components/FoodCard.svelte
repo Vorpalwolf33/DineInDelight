@@ -3,9 +3,9 @@
   export let food: Food
 </script>
 
-<div class="w-full max-w-[500px] h-[150px] shadow-lg rounded-2xl flex flex-row overflow-hidden">
-  <div class="flex-1 shrink-0">
-    <img src="{food.image}" alt="Food" class="h-full w-full object-cover"/>
+<div class="w-full max-w-[400px] md:w-[400px] w-[300px] shadow-lg rounded-2xl flex flex-row overflow-hidden hover:shadow-xl duration-100 border hover:border-gray-200">
+  <div class="md:w-[200px] md:h-[200px] w-[150px] h-[150px]">
+    <img src="./src/lib/assets/{food.image}" alt="Food" class="h-full w-full object-cover"/>
   </div>
   <div class="flex-1 px-4 py-3 flex flex-col justify-between">
     <div>
