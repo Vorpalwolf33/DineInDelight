@@ -1,9 +1,14 @@
 import Category from "$lib/server/models/category"
 import MenuItem from "$lib/server/models/menu-item"
+import { redirect, error } from "@sveltejs/kit"
 
 export async function load({url}) {
   const categories = await Category.find({}, 'name').lean()
+  if(categories.length == 0 || !categories) throw error(500, "No Categories available")
+  
   const id = url.searchParams.get("category")
+  if(!id && categories.length > 0) throw redirect(302, "/guest?category=" + categories[0]._id)
+  
   const items = await MenuItem.find({category: id}).lean().populate('category')
 
   return {

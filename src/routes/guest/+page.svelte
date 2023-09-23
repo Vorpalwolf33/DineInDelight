@@ -4,12 +4,12 @@
 	import type { Food } from '$lib/utils/FoodType';
 	import Navbar from "$lib/components/Navbar.svelte";
 	import Footer from "$lib/components/Footer.svelte";
+	import { goto } from "$app/navigation";
 
 	let categories: Array<{_id: string, name: string}> = []
 	let menuItems: Array<Food> = []
 	$: categories = $page.data.categories
 	$: menuItems = $page.data.menuItems
-
 </script>
 
 {#if $page.url.host.includes('admin')}
