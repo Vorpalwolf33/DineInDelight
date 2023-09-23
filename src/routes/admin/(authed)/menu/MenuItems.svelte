@@ -34,8 +34,12 @@
 	const handleDelete = async (id: string) => {
 		const response = await fetch('/admin/menu/menu-item?id=' + id, {method: "DELETE"})
 		const data = await response.json()
-		if(data.success)
+		console.log(data)
+		if(data.success) {
+			console.log(menuItems)
 			menuItems = menuItems.filter((cat: {_id: string, name: string}) => cat._id != id)
+			console.log(menuItems)
+		}
 	}
 
 </script>
@@ -84,6 +88,7 @@
 			<thead class="border-b border-b-2">
 				<tr>
 					<th>#</th>
+					<th>Image</th>
 					<th>Name</th>
 					<th>Price</th>
 					<th>Category</th>
@@ -94,12 +99,15 @@
 				{#each menuItems as item, index}
 					<tr>
 						<td class="min-w-[30px]">{index + 1}</td>
+						<td class="py-2">
+							<img src="/src/lib/assets/{item.image}" alt="thumbnail" class="w-[64px] h-[64px] object-cover relative left-1/2 translate-x-[-50%]"/>
+						</td>
 						<td class="">{item.name}</td>
-						<td>{item.price}</td>
+						<td class="">{item.price}</td>
 						<td>{item.category.name}</td>
-						<td class="flex flex-row justify-center gap-2 py-2">
+						<td class="flex flex-row justify-center gap-2 pt-4">
 							<!-- <button class="bg-gray-100 border border-gray-700 hover:bg-white hover:border-black duration-100 hover:scale-105 px-2 py-1 rounded-sm">Edit</button> -->
-							<button on:click={() => handleDelete(item._id)} class="bg-gray-100 border border-gray-700 hover:bg-white hover:border-black duration-100 hover:scale-105 px-2 py-1 rounded-sm">Delete</button>
+							<button on:click={() => handleDelete(item._id)} class="mt-2 bg-gray-100 border border-gray-700 hover:bg-white hover:border-black duration-100 hover:scale-105 px-2 py-1 rounded-sm">Delete</button>
 						</td>
 					</tr>
 				{/each}

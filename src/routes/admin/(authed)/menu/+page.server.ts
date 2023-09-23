@@ -33,7 +33,6 @@ export const actions = {
 	},
 	"add-menu-item": async ({request}) => {
 		const formData = Object.fromEntries(await request.formData())
-		console.log(formData)
 
 		const file = formData.image as File
 		const extension = file.type.split('/')[1]
@@ -47,7 +46,7 @@ export const actions = {
 		}
 
 		try {
-			writeFileSync(`assets/${fileName}`, Buffer.from(await file.arrayBuffer()))
+			writeFileSync(`./src/lib/assets/${fileName}`, Buffer.from(await file.arrayBuffer()))
 			return {success: true}
 		} catch(err) {
 			throw error(500, "Unexpected error while saving the thumbnail")

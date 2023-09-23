@@ -9,3 +9,4 @@ bun.lockb
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+src/lib/assets/*

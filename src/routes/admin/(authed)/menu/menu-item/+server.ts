@@ -8,7 +8,7 @@ export async function DELETE({url}) {
 		try {
 			const deletedItem = await MenuItem.findOneAndDelete({_id})
 			if(deletedItem)
-				await unlinkSync(`assets/${deletedItem.image}`)
+				await unlinkSync(`./src/lib/assets/${deletedItem.image}`)
 			else throw error(400, "Menu Item not found")
 			return new Response(JSON.stringify({success: true}), {status: 200})
 		} catch(err) {
